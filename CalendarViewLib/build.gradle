@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion 33
+
+    defaultConfig {
+
+        minSdkVersion 18
+        targetSdkVersion 33
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}
